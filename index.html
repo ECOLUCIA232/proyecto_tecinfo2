@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Gian Luca Poumian Torres</title>
+    <style>
+        /* --- Estilos generales --- */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(252, 199, 242);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Portada --- */
+        header {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .portada h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .info-personal {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 1rem;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 0 auto 2rem auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .imagen-portada {
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-top: 1rem;
+        }
+
+        /* --- Marquesina --- */
+        .marquesina-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .marquesina {
+            font-size: 2rem;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: desplazar 10s linear infinite;
+        }
+        @keyframes desplazar {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* --- Botón interactivo --- */
+        .boton-interactivo {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 12px 20px;
+            background-color: #ff6b9d;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .boton-interactivo:hover {
+            background-color: #ff4785;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        .boton-interactivo:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* --- Menú de actividades --- */
+        nav {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .menu-actividades {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu-actividades li {
+            margin-bottom: 0.5rem;
+        }
+        .menu-actividades a {
+            display: block;
+            padding: 0.5rem 1rem;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .menu-actividades a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Portada -->
+    <header>
+        <div class="portada">
+            <h1>Mi Portafolio</h1>
+            <div class="info-personal">
+                <p><strong>Nombre:</strong> Gian Luca Poumian Torres</p>
+                <p><strong>Campus:</strong> UVM Lomas Verdes</p>
+                <p><strong>Docente:</strong> Beatriz Janet Mora Granados</p>
+            </div>
+            <img src="gatoindex.jpg" alt="Imagen de portada" class="imagen-portada">
+        </div>
+    </header>
+
+    <!-- Marquesina -->
+    <div class="marquesina-container">
+        <div class="marquesina">
+            🚀 Bienvenid@s a mi portafolio de JavaScript! ✨
+        </div>
+    </div>
+
+    <!-- Botón interactivo -->
+    <button class="boton-interactivo" id="miBoton">Haz clic aquí</button>
+
+    <!-- Menú de actividades -->
+    <nav>
+        <h2>Actividades</h2>
+        <ul class="menu-actividades">
+            <li><a href="#">Actividad 1</a></li>
+            <li><a href="#">Actividad 2</a></li>
+            <li><a href="#">Actividad 3</a></li>
+            <li><a href="#marquesina">Marquesina Animada</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2023 Gian Luca Poumian Torres - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Función para el botón interactivo
+        document.getElementById('miBoton').addEventListener('click', function() {
+            alert('¡Gracias por visitar mi portafolio! 😊\nPronto agregaré más proyectos interesantes.');
+            this.textContent = '¡Gracias!';
+            setTimeout(() => {
+                this.textContent = 'Haz clic aquí';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
